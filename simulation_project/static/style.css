@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+canvas {
+    border: 1px solid black;
+    margin-top: 20px;
+}
+/* Estilo general para la barra de slider */
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Barra de progreso con los límites visibles */
+.progress-bar-container {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    position: relative;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+/* Estilo para el slider */
+#temperatureSlider {
+    width: 50px;
+    --webkit-appearance: none;
+    height: 15px;
+    background: transparent;
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilo de la bolita del slider */
+#temperatureSlider::-webkit-slider-thumb {
+    --webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+#temperatureSlider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Valor del slider */
+.temperature-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Canvas para la simulación */
+#canvas-container {
+    width: 100%;
+    height: 500px; /* Asegúrate de que el canvas tenga suficiente espacio */
+    margin-top: 30px; /* Agregar margen superior para separación */
+}
+
+/* Asegurando que los botones estén correctamente separados */
+.btn-container {
+    margin-top: 30px;
+}
